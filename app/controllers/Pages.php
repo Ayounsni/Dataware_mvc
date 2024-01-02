@@ -1,15 +1,22 @@
 <?php
 class Pages  extends Controller {
+    
     public function __construct() {
         
-        echo "ahahah";
+        
+        
     }
     public function index(){
-        $this->view('hello');;
+         
+        $this->view('index',['id'=>$_SESSION['user_id']]);
         
         
     }
-        
+    public function about(){
+        echo 'Congratulations';
+        $this->view('oui', ['oui'=> 'meMario']);
+
+    }
 }
 
 ?>
